@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full-Screen Embed</title>
+    <style>
+      /* Reset básico */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* A página ocupa toda a tela */
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* O iframe ocupa toda a área visível */
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe
+      width="100%"
+      height="400px"
+      src="https://api.mapbox.com/styles/v1/gustavohls/cm435p2ft00sf01qq117yccw8.html?title=false&access_token=pk.eyJ1IjoiZ3VzdGF2b2hscyIsImEiOiJjbTQzNWx4ZnYwODVuMmtvajNudDB2NHA4In0.EJ2msvb2NXMmovd5I9TirQ&zoomwheel=false#12.08/-23.52191/-46.56457/36/50"
+      title="São Paulo Subway"
+      style="border: none"
+    ></iframe>
+  </body>
+</html>
