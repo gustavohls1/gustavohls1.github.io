@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Full-Screen Embed</title>
+    <title>Full-Screen Embed with Color Legend</title>
     <style>
       /* Reset básico */
       * {
@@ -17,6 +17,8 @@
       body {
         width: 100%;
         height: 100%;
+        position: relative;
+        font-family: Arial, sans-serif;
       }
 
       /* O iframe ocupa toda a área visível */
@@ -25,15 +27,149 @@
         height: 100%;
         border: none;
       }
+
+      /* Estilo da legenda no canto inferior esquerdo */
+      .caption {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        background: rgba(0, 0, 0, 0.6); /* Fundo semitransparente */
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 14px;
+        max-width: 300px; /* Limita a largura da legenda */
+      }
+
+      .caption ul {
+        list-style: none; /* Remove marcadores padrão da lista */
+        padding: 0;
+        margin: 0;
+      }
+
+      .caption li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+      }
+
+      .caption li:last-child {
+        margin-bottom: 0; /* Remove margem do último item */
+      }
+
+      .color-box {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        border-radius: 4px; /* Bordas arredondadas para os quadrados */
+      }
+
+      .linha-azul {
+        background-color: #171786;
+      }
+      .linha-verde {
+        background-color: #007a5e;
+      }
+      .linha-vermelha {
+        background-color: #ed2e38;
+      }
+      .linha-amarela {
+        background-color: #efba00;
+      }
+      .linha-lilas {
+        background-color: #9271b1;
+      }
+      .linha-rubi {
+        background-color: #a8034f;
+      }
+      .linha-diamante {
+        background-color: #949488;
+      }
+      .linha-esmeralda {
+        background-color: #219896;
+      }
+      .linha-turquesa {
+        background-color: #00829b;
+      }
+      .linha-coral {
+        background-color: #f55f1a;
+      }
+      .linha-safira {
+        background-color: #1c5b81;
+      }
+      .linha-jade {
+        background-color: #00b352;
+      }
+      .linha-prata {
+        background-color: #8f8f8c;
+      }
     </style>
   </head>
   <body>
     <iframe
       width="100%"
       height="400px"
-      src="https://api.mapbox.com/styles/v1/gustavohls/cm435p2ft00sf01qq117yccw8.html?title=false&access_token=pk.eyJ1IjoiZ3VzdGF2b2hscyIsImEiOiJjbTQzNWx4ZnYwODVuMmtvajNudDB2NHA4In0.EJ2msvb2NXMmovd5I9TirQ&zoomwheel=false#12.08/-23.52191/-46.56457/36/50"
+      src="https://api.mapbox.com/styles/v1/gustavohls/cm435p2ft00sf01qq117yccw8.html?title=false&access_token=pk.eyJ1IjoiZ3VzdGF2b2hscyIsImEiOiJjbTQzNWx4ZnYwODVuMmtvajNudDB2NHA4In0.EJ2msvb2NXMmovd5I9TirQ&zoomwheel=false#12.14/-23.5927/-46.60132/90.4/61"
       title="São Paulo Subway"
       style="border: none"
     ></iframe>
+
+    <!-- Legenda no canto inferior esquerdo -->
+    <div class="caption">
+      <ul>
+        <li>
+          <div class="color-box linha-azul"></div>
+          Linha 1 - Azul
+        </li>
+        <li>
+          <div class="color-box linha-verde"></div>
+          Linha 2 - Verde
+        </li>
+        <li>
+          <div class="color-box linha-vermelha"></div>
+          Linha 3 - Vermelha
+        </li>
+        <li>
+          <div class="color-box linha-amarela"></div>
+          Linha 4 - Amarela
+        </li>
+        <li>
+          <div class="color-box linha-lilas"></div>
+          Linha 5 - Lilás
+        </li>
+        <li>
+          <div class="color-box linha-rubi"></div>
+          Linha 7 - Rubi
+        </li>
+        <li>
+          <div class="color-box linha-diamante"></div>
+          Linha 8 - Diamante
+        </li>
+        <li>
+          <div class="color-box linha-esmeralda"></div>
+          Linha 9 - Esmeralda
+        </li>
+        <li>
+          <div class="color-box linha-turquesa"></div>
+          Linha 10 - Turquesa
+        </li>
+        <li>
+          <div class="color-box linha-coral"></div>
+          Linha 11 - Coral
+        </li>
+        <li>
+          <div class="color-box linha-safira"></div>
+          Linha 12 - Safira
+        </li>
+        <li>
+          <div class="color-box linha-jade"></div>
+          Linha 13 - Jade
+        </li>
+        <li>
+          <div class="color-box linha-prata"></div>
+          Linha 15 - Prata
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
